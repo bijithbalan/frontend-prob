@@ -69,6 +69,17 @@
           <div class="form-check">
             <input
               class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckIndeterminate"
+            />
+            <label class="form-check-label" for="flexCheckIndeterminate">
+              Indeterminate checkbox
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
               type="radio"
               name="flexRadioDefault"
               id="flexRadioDefault"
@@ -81,7 +92,7 @@
             <input
               class="form-check-input"
               type="radio"
-              name="flexRadioDefault"
+              name="flexRadioChecked"
               id="flexRadioChecked"
               checked
             />
@@ -93,13 +104,13 @@
             <input
               class="form-check-input"
               type="radio"
-              name="flexRadioDefault"
+              name="flexRadioDisabled"
               id="flexRadioDisabled"
               checked
               disabled
             />
             <label class="form-check-label" for="flexRadioDisabled">
-              Default checked radio
+              Disabled checked radio
             </label>
           </div>
           <div class="form-check form-switch">
@@ -209,8 +220,8 @@
               disabled
             />
             <label class="form-check-label" for="inlineRadio3">
-              3 (disabled)'</label
-            >
+              3 (disabled)
+            </label>
           </div>
         </div>
       </div>
@@ -329,5 +340,31 @@
     </div>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+      let checkbox = document.getElementById("flexCheckIndeterminate");
+      checkbox.indeterminate = true;
+
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
