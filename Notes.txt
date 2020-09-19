@@ -1,0 +1,3 @@
+container-fluid takes the entire screen width.
+container-md takes full width until breakpoint.
+Bootstrap has h1-h6 classes and also display-1 to display-6 classes.

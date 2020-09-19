@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bootstrap 5</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <style>
+      .border {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid</h1>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-8 border">Main Content</div>
+        <div class="col-md-4 border">Sidebar</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 text-center border">
+          <h2>Header</h2>
+          <div class="row text-center">
+            <div class="col-md-6 border">
+              <h4>Article</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
+                accusantium sapiente maiores corrupti impedit, praesentium eaque
+                ex sint numquam sequi.
+              </p>
+            </div>
+            <div class="col-md-6 border">
+              <h4>Article</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt architecto laborum excepturi debitis ipsam quis animi
+                quo beatae hic itaque.
+              </p>
+            </div>
+          </div>
+          <h2>footer</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="row justify-content-start">
+        <div class="col-4 border">One of two columns</div>
+        <div class="col-4 border">One of two columns</div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-4 border">One of two columns</div>
+        <div class="col-4 border">One of two columns</div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-4 border">One of two columns</div>
+        <div class="col-4 border">One of two columns</div>
+      </div>
+      <div class="row justify-content-around">
+        <div class="col-4 border">One of two columns</div>
+        <div class="col-4 border">One of two columns</div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-4 border">One of two columns</div>
+        <div class="col-4 border">One of two columns</div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
