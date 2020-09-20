@@ -3,6 +3,16 @@ import PropTypes from "prop-types";
 
 function TodoItem({ todo, markComplete, delTodo }) {
   const { id, title, completed } = todo;
+
+  function getStyle(todo) {
+    return {
+      backgroundColor: "#f4f4f4",
+      padding: "10px",
+      borderBottom: "1px #ccc dotted",
+      textDecoration: todo.completed ? "line-through" : "none",
+    };
+  }
+
   return (
     <div style={getStyle(todo)}>
       <p>
@@ -29,15 +39,6 @@ const btnStyle = {
   cursor: "pointer",
   float: "right",
 };
-
-function getStyle(todo) {
-  return {
-    backgroundColor: "#f4f4f4",
-    padding: "10px",
-    borderBottom: "1px #ccc dotted",
-    textDecoration: todo.completed ? "line-through" : "none",
-  };
-}
 
 TodoItem.propTypes = {
   todo: PropTypes.object.isRequired,

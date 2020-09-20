@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/layouts/Header";
 import Todo from "./components/Todo";
-import AddTodo from "./components/AddTodo";
+import { AddTodo } from "./components/AddTodo";
 import About from "./components/pages/About";
 
 import Axios from "axios";
