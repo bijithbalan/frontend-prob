@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./components/layouts/Header";
-import Todo from "./components/Todo";
-import { AddTodo } from "./components/AddTodo";
-import About from "./components/pages/About";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './components/layouts/Header';
+import Todo from './components/Todo';
+import { AddTodo } from './components/AddTodo';
+import About from './components/pages/About';
 
-import Axios from "axios";
+import Axios from 'axios';
 
 function App() {
   const [todos, setTodo] = useState([]);
 
   useEffect(() => {
     Axios.get(
-      "http://jsonplaceholder.typicode.com/todos?_limit=10"
+      'http://jsonplaceholder.typicode.com/todos?_limit=10'
     ).then((res) => setTodo(res.data));
   }, [setTodo]);
 
   function addTodo(title) {
-    Axios.post("http://jsonplaceholder.typicode.com/todos", {
+    Axios.post('http://jsonplaceholder.typicode.com/todos', {
       title,
       completed: false,
     })
       .then((res) => {
         setTodo([...todos, res.data]);
       })
-      .catch((e) => console.log("error", e));
+      .catch((e) => console.log('error', e));
   }
 
   function markComplete(id) {

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddTodo = ({ addTodo }) => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
 
   function onChange(e) {
     setTitle(e.target.value);
@@ -11,15 +11,15 @@ export const AddTodo = ({ addTodo }) => {
   function onSubmit(e) {
     e.preventDefault();
     addTodo(title);
-    setTitle("");
+    setTitle('');
   }
 
   return (
-    <form style={{ display: "flex" }} onSubmit={onSubmit}>
+    <form style={{ display: 'flex' }} onSubmit={onSubmit}>
       <input
         type="text"
         name="title"
-        style={{ flex: "10", padding: "5px" }}
+        style={{ flex: '10', padding: '5px' }}
         placeholder="Add Todo ..."
         value={title}
         onChange={onChange}
@@ -28,7 +28,7 @@ export const AddTodo = ({ addTodo }) => {
         type="submit"
         value="Submit"
         className="btn"
-        style={{ flex: "1" }}
+        style={{ flex: '1' }}
       />
     </form>
   );

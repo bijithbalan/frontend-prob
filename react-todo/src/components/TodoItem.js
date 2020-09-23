@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function TodoItem({ todo, markComplete, delTodo }) {
   const { id, title, completed } = todo;
 
   function getStyle(todo) {
     return {
-      backgroundColor: "#f4f4f4",
-      padding: "10px",
-      borderBottom: "1px #ccc dotted",
-      textDecoration: todo.completed ? "line-through" : "none",
+      backgroundColor: '#f4f4f4',
+      padding: '10px',
+      borderBottom: '1px #ccc dotted',
+      textDecoration: todo.completed ? 'line-through' : 'none',
     };
   }
 
@@ -31,13 +31,13 @@ function TodoItem({ todo, markComplete, delTodo }) {
 }
 
 const btnStyle = {
-  background: "#ff0000",
-  color: "#fff",
-  border: "none",
-  padding: "5px 9px",
-  borderRadius: "50%",
-  cursor: "pointer",
-  float: "right",
+  background: '#ff0000',
+  color: '#fff',
+  border: 'none',
+  padding: '5px 9px',
+  borderRadius: '50%',
+  cursor: 'pointer',
+  float: 'right',
 };
 
 TodoItem.propTypes = {

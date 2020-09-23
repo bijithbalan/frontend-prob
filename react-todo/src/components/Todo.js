@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import TodoItem from "./TodoItem";
+import React from 'react';
+import PropTypes from 'prop-types';
+import TodoItem from './TodoItem';
 
 function Todo({ todos, markComplete, delTodo }) {
   return (
