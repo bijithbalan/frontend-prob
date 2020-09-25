@@ -1,0 +1,51 @@
+.box {
+  width: 500px;
+}
+
+.box h1 {
+  background: #808080;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.box ul {
+  position: relative;
+  background: #ffffff;
+}
+
+.box ul:hover li {
+  opacity: 0.2;
+}
+
+.box ul li {
+  list-style: none;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+.box ul li:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: #808080;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.box ul li span {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background: #dcdcdc;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  transform: translateY(-2px);
+}

@@ -35,5 +35,5 @@ export const AddTodo = ({ addTodo }) => {
 };
 
 AddTodo.propTypes = {
-  addTodo: PropTypes.func.isRequired,
+  addTodo: PropTypes.func.isRequired
 };

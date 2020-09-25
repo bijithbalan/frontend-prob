@@ -20,7 +20,7 @@ function App() {
   function addTodo(title) {
     Axios.post('http://jsonplaceholder.typicode.com/todos', {
       title,
-      completed: false,
+      completed: false
     })
       .then((res) => {
         setTodo([...todos, res.data]);

@@ -18,14 +18,14 @@ function Header() {
 
 const linkStyle = {
   color: '#fff',
-  textDecoration: 'none',
+  textDecoration: 'none'
 };
 
 const headerStyle = {
   background: '#333',
   color: '#fff',
   textAlign: 'center',
-  padding: '10px',
+  padding: '10px'
 };
 
 export default Header;

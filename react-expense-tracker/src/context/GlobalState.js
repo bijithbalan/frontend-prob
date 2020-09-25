@@ -3,7 +3,7 @@ import AppReducer from '../reducers/AppReducer';
 import { addTransaction, deleteTransaction } from '../actions';
 
 const initialState = {
-  transactions: [],
+  transactions: []
 };
 
 export const GlobalContext = createContext(initialState);

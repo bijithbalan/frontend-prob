@@ -13,7 +13,7 @@ export const AddTransaction = () => {
     const newTransaction = {
       id: uuid(),
       text,
-      amount: +amount,
+      amount: +amount
     };
     addDispatch(newTransaction);
   };
