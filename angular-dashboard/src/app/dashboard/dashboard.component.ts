@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../course';
-import { CourseService } from '../course.service';
+import { CourseService } from '../services/course.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +9,7 @@ import { CourseService } from '../course.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private CourseService: CourseService) { }
+  constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
     this.getCourses();
@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getCourses(): void {
-    this.CourseService.getCourses().subscribe((courses) => this.courses = courses);
+    this.courseService.getCourses().subscribe((courses) => this.courses = courses);
   }
 
 }

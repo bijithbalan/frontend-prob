@@ -36,5 +36,9 @@ export const COURSES: Course[] = [
   {
     id: 9,
     name: 'Couchbase'
+  },
+  {
+    id: 10,
+    name: 'Vue'
   }
 ];

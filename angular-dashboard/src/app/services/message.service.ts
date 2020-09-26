@@ -13,6 +13,10 @@ export class MessageService {
     this.messages.push(message);
   }
 
+  get(): string[] {
+    return this.messages;
+  }
+
   clear() {
     this.messages = [];
   }

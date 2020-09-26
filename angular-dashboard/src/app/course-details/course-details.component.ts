@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../course';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-course-details',
@@ -8,12 +9,13 @@ import { Course } from '../course';
 })
 export class CourseDetailsComponent implements OnInit {
 
-  @Input() course: Course;
+  course: Course;
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.course = window.history.state.course;
+    this.messageService.add(this.course.name + " page visited.");
   }
 
 }

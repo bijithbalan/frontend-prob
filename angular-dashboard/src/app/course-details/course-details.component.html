@@ -1,4 +1,4 @@
-<div>
+<div class="content">
   <div *ngIf="course">
     <h2>{{ course.name | uppercase }} Details</h2>
     <div><span>Id: </span>{{ course.id }}</div>
@@ -10,3 +10,4 @@
     </div>
   </div>
 </div>
+<app-messages [course]="course"></app-messages>

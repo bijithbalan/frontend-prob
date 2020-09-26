@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MessageService } from '../message.service';
+import { MessageService } from '../services/message.service';
 import { Course } from '../course';
 
 @Component({
@@ -9,10 +9,18 @@ import { Course } from '../course';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor(public messageService: MessageService) { }
-
-  ngOnInit(): void { }
-
   @Input() course: Course;
+  messages: string[];
+
+  constructor(private messageService: MessageService) { }
+
+  ngOnInit(): void {
+    this.messages = this.messageService.get();
+  }
+
+  clear() {
+    this.messageService.clear();
+    this.messages = [];
+  }
 
 }
