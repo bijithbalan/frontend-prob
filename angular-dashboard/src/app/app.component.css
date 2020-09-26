@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  padding: 0.25em 1em;
+  text-decoration: none;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #6e6e6e;
+  color: #000000;
+}
