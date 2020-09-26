@@ -1,1 +1,10 @@
-<p>messages works!</p>
+<div *ngIf="course">
+  <h2>{{ course.name | uppercase }} Details</h2>
+  <div><span>Id: </span>{{ course.id }}</div>
+  <div>
+    <label>
+      Name:
+      <input [(ngModel)]="course.name" placeholder="Course Name" />
+    </label>
+  </div>
+</div>

@@ -8,10 +8,12 @@ import { Course } from '../course';
 })
 export class CourseDetailsComponent implements OnInit {
 
+  @Input() course: Course;
+
   constructor() { }
 
-  ngOnInit(): void { }
-
-  @Input() course: Course;
+  ngOnInit(): void {
+    this.course = window.history.state.course;
+  }
 
 }

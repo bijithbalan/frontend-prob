@@ -1,3 +1,11 @@
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f6f6f6;
+}
+
 .box {
   width: 500px;
 }
@@ -49,4 +57,10 @@
   font-size: 12px;
   font-weight: 600;
   transform: translateY(-2px);
+}
+
+.box ul li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
 }

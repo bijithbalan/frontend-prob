@@ -16,11 +16,6 @@ export class CoursesComponent implements OnInit {
   }
 
   courses: Course[];
-  selectedCourse: Course;
-
-  onSelect(course: Course): void {
-    this.selectedCourse = course;
-  }
 
   getCourses(): void {
     this.CourseService.getCourses().subscribe((courses) => this.courses = courses);
