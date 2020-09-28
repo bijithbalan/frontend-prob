@@ -1,13 +1,15 @@
 body {
   background-color: #eeeeee;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .container {
   background-color: #ffffff;
-  width: 800px; /* Can be removed to extend to 100% */
-  margin-left: auto;
-  margin-right: auto;
+  /* width: 800px; Can be removed to extend to 100% and to align stack-wise for smaller window */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: auto;
 }
 
 .header {
@@ -27,12 +29,12 @@ h3 {
   padding: 10px;
 }
 
-.nav {
-  width: 180px; /* % values can be given */
+nav {
+  width: 20%; /* Can be removed to align stack-wise for smaller window */
   float: left;
 }
 
-.nav ul {
+nav ul {
   list-style-type: none;
   padding: 0;
 }
@@ -47,8 +49,53 @@ a {
 }
 
 .main {
-  width: 600px; /* Required for float to work properly */
+  width: 80%; /* Required for float to work properly */
   float: right;
+}
+
+.form {
+  clear: both;
+  padding: 20px;
+}
+
+.form .form-group {
+  padding-bottom: 15px;
+}
+
+.form label {
+  display: block;
+}
+
+.form input[type="text"],
+.form textarea {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.contacts {
+  padding: 20px;
+}
+
+.contact {
+  float: left;
+  width: 33.3%;
+  border: 1px dotted #cccccc;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .footer {
@@ -57,4 +104,23 @@ a {
   background-color: #999999;
   color: #ffffff;
   text-align: right;
+  border-top: 10px solid #ffffff;
+}
+
+@media(max-width: 600px) {
+  nav, .main {
+    width: 100%;
+    float: none;
+  }
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    display: inline;
+    padding-right: 15px;
+  }
+  .contact {
+    float: none;
+    width: 100%;
+  }
 }

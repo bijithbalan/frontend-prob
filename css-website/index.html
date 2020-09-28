@@ -1,48 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>CSS Tutorial</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>CSS Tutorial</h1>
-      </div>
-      <div class="content">
-        <div class="nav">
-          <h3>Navigation</h3>
-          <ul>
-            <li><a href="" class="selected">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>CSS Tutorial</h1>
+    </header>
+    <div class="content">
+      <nav>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="" class="selected">Home</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="main">
+        <h2>Home Page</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fuga
+          quia, corrupti asperiores voluptatibus recusandae nulla magnam amet
+          temporibus cum nostrum! Repellat vitae aliquid ullam distinctio ad
+          eaque dolore eligendi!
+        </p>
+        <p>
+          Sodales ut eu sem integer vitae justo eget magna fermentum.
+          Scelerisque fermentum dui faucibus in ornare quam viverra orci.
+          Viverra ipsum nunc aliquet bibendum. Eu facilisis sed odio morbi
+          quis commodo odio aenean sed. In mollis nunc sed id semper risus in.
+          Volutpat odio facilisis mauris sit amet massa vitae. Urna cursus
+          eget nunc scelerisque viverra mauris in aliquam sem. Nunc non
+          blandit massa enim. Donec pretium vulputate sapien nec. Purus
+          viverra accumsan in nisl nisi. Sodales ut etiam sit amet nisl purus
+          in. Pellentesque habitant morbi tristique senectus et netus et
+          malesuada. Feugiat sed lectus vestibulum mattis ullamcorper velit
+          sed.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fuga
+          quia, corrupti asperiores voluptatibus recusandae nulla magnam amet
+          temporibus cum nostrum! Repellat vitae aliquid ullam distinctio ad
+          eaque dolore eligendi!
+        </p>
+        <p>
+          Sodales ut eu sem integer vitae justo eget magna fermentum.
+          Scelerisque fermentum dui faucibus in ornare quam viverra orci.
+          Viverra ipsum nunc aliquet bibendum. Eu facilisis sed odio morbi
+          quis commodo odio aenean sed. In mollis nunc sed id semper risus in.
+          Volutpat odio facilisis mauris sit amet massa vitae. Urna cursus
+          eget nunc scelerisque viverra mauris in aliquam sem. Nunc non
+          blandit massa enim. Donec pretium vulputate sapien nec. Purus
+          viverra accumsan in nisl nisi. Sodales ut etiam sit amet nisl purus
+          in. Pellentesque habitant morbi tristique senectus et netus et
+          malesuada. Feugiat sed lectus vestibulum mattis ullamcorper velit
+          sed.
+        </p>
+      </section>
+      <form id="form" class="form">
+        <div class="form-group">
+          <label>Name: </label>
+          <input type="text" name="name">
         </div>
-        <div class="main">
-          <h2>Home Page</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fuga
-            quia, corrupti asperiores voluptatibus recusandae nulla magnam amet
-            temporibus cum nostrum! Repellat vitae aliquid ullam distinctio ad
-            eaque dolore eligendi!
-          </p>
-          <p>
-            Sodales ut eu sem integer vitae justo eget magna fermentum.
-            Scelerisque fermentum dui faucibus in ornare quam viverra orci.
-            Viverra ipsum nunc aliquet bibendum. Eu facilisis sed odio morbi
-            quis commodo odio aenean sed. In mollis nunc sed id semper risus in.
-            Volutpat odio facilisis mauris sit amet massa vitae. Urna cursus
-            eget nunc scelerisque viverra mauris in aliquam sem. Nunc non
-            blandit massa enim. Donec pretium vulputate sapien nec. Purus
-            viverra accumsan in nisl nisi. Sodales ut etiam sit amet nisl purus
-            in. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada. Feugiat sed lectus vestibulum mattis ullamcorper velit
-            sed.
-          </p>
+        <div class="form-group">
+          <label>Email: </label>
+          <input type="text" name="email">
+        </div>
+        <div class="form-group">
+          <label>Message: </label>
+          <textarea name="message"></textarea>
+        </div>
+        <input type="submit" class="button">
+      </form>
+      <div id="contact" class="contacts">
+        <div class="contact">
+          <h3>Admin</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, modi. Est adipisci beatae ipsum. Quibusdam,
+            officia. Nihil necessitatibus harum in mollitia placeat nulla quaerat dolore, quod animi cupiditate, impedit
+            eligendi.</p>
+        </div>
+        <div class="contact">
+          <h3>Manager</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, modi. Est adipisci beatae ipsum. Quibusdam,
+            officia. Nihil necessitatibus harum in mollitia placeat nulla quaerat dolore, quod animi cupiditate, impedit
+            eligendi.</p>
+        </div>
+        <div class="contact">
+          <h3>User</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, modi. Est adipisci beatae ipsum. Quibusdam,
+            officia. Nihil necessitatibus harum in mollitia placeat nulla quaerat dolore, quod animi cupiditate, impedit
+            eligendi.</p>
         </div>
       </div>
-      <div class="footer">Copyright &copy; 2020</div>
     </div>
-  </body>
+    <div class="footer">Copyright &copy; 2020</div>
+  </div>
+</body>
+
 </html>
