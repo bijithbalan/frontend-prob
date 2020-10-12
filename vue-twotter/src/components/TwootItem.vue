@@ -22,10 +22,14 @@ export default {
       required: true
     }
   },
-  methods: {
-    favoriteTwoot(id) {
-      this.$emit('favorite', id);
+  setup(props, ctx) {
+    function favoriteTwoot(id) {
+      ctx.emit('favorite', id);
     }
+
+    return {
+      favoriteTwoot
+    };
   }
 };
 </script>

@@ -7,14 +7,14 @@
     <label for="newTwoot">
       <strong>New Twoot</strong> ({{ newTwootCharCount }}/180)
     </label>
-    <textarea id="newTwoot" rows="4" v-model="twootContent" />
+    <textarea id="newTwoot" rows="4" v-model="state.twootContent" />
     <div class="twoot-submit">
       <div class="twoot-type">
         <label for="twootType"><strong>Type: </strong></label>
-        <select id="twootType" v-model="selectedTwootType">
+        <select id="twootType" v-model="state.selectedTwootType">
           <option
             :value="option.value"
-            v-for="(option, index) in twootTypes"
+            v-for="(option, index) in state.twootTypes"
             :key="index"
           >
             {{ option.name }}
@@ -27,10 +27,12 @@
 </template>
 
 <script>
+import { reactive, computed } from 'vue';
+
 export default {
   name: 'CreateTwoot',
-  data() {
-    return {
+  setup(props, ctx) {
+    const state = reactive({
       twootTypes: [
         {
           value: 'draft',
@@ -41,22 +43,24 @@ export default {
           name: 'Instant Twoot'
         }
       ],
-      selectedTwootType: 'instant',
+      selectedTwootType: 'draft',
       twootContent: ''
-    };
-  },
-  computed: {
-    newTwootCharCount() {
-      return this.twootContent.length;
-    }
-  },
-  methods: {
-    createTwoot() {
-      if (this.twootContent && 'draft' !== this.selectedTwootType) {
-        this.$emit('add-twoot', this.twootContent);
-        this.twootContent = '';
+    });
+
+    const newTwootCharCount = computed(() => state.twootContent.length);
+
+    function createTwoot() {
+      if (state.twootContent && 'draft' !== state.selectedTwootType) {
+        ctx.emit('add-twoot', state.twootContent);
+        state.twootContent = '';
       }
     }
+
+    return {
+      state,
+      newTwootCharCount,
+      createTwoot
+    };
   }
 };
 </script>
